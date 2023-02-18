@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<embed src="" autostart="true" loop="true" hidden="true"></embed>
+		<title>主页面</title>
+		<style>
+			  
+			  .int{
+				  display: flex;
+				  align-items: center;
+				  justify-content: center;
+			  	  z-index: 1;
+				  background-repeat: no-repeat;
+			  }
+			  .int1{
+				  text-align: center;
+				  width:40%;
+				  height:60%;
+			  }
+			  .main{ 
+			  	z-index: 2;
+				position: absolute;
+			  	left:50%;
+			  	top:117%;
+			  	opacity: 0.8;
+			  }
+			  .main1{ 
+				  width: 55%;
+				  height: 55%;
+			  }
+			  .main0{
+			  	z-index: 2;
+			  	position: absolute;
+			  	left:63%;
+			  	top:1%;
+			  }
+			  .int2{
+			  	width: 20%;
+			  	height: 20%;
+			  }
+			  .main2{
+			  	z-index: 2;
+			  	position: absolute;
+			  	left:63%;
+			  	top:10%;
+			  }
+			  .int3{
+			  	width: 20%;
+			  	height: 20%;
+				
+			  }
+			  .ProgressBackground{
+				  position: absolute;
+				  top: 175%;
+				  left: 50%;
+				  translate: -50%;
+				  width: 35%;
+				  height: 10px;
+				  background: gray;
+				  opacity: 0.7;
+				  border-radius: 5px;
+				  overflow: hidden;
+			  }
+			  .Progreess{
+				  position: absolute;
+				  top: 0;
+				  left: -35%;
+				  width: 35%;
+				  height: 10px;
+				  border-radius: 5px;
+				  background: #edc113d;
+			  }
+			  a:hover img{
+			  	    opacity:0.5;
+			        }
+			  @media screen and (max-width: 640px) {
+				  .int{
+					  display: flex;
+					  align-items: center;
+					  justify-content: center;
+				  	  z-index: 1;
+					  background-repeat: no-repeat;
+					  background-size: cover;
+				  }
+				  .int1{
+					  text-align: center;
+					  width:100%;
+					  height:100%;
+				  }
+				  .main{ 
+				  	z-index: 2;
+				  	position: absolute;
+				  	left:45%;
+				  	top:56%;
+				  	opacity: 0.8;
+				  }
+				  .main1{
+					  width:95%;
+					  height:75%;
+				  }
+				  .main0{
+				  	z-index: 2;
+				  	position: absolute;
+				  	left:85%;
+				  	top:2%;
+				  }
+				  .int2{
+				  	width: 100%;
+				  	height: 100%;
+				  }
+				  .main2{
+				  	z-index: 2;
+				  	position: absolute;
+				  	left:85%;
+				  	top:7%;
+				  }
+				  .int3{
+				  	width: 100%;
+				  	height: 100%;
+				  }
+				  a:hover img{
+				  	    opacity:0.5;
+				        }
+			 } 	  
+		</style>
+		<script>
+			var left = -35%;
+			function ProgressLoad(){
+				var Progress = document.getElementsByClassName('Progress')[0].style.left = left + 'px';
+			    left += Math.random()*10;
+			    if(left <= 0){
+					window.requestAnimationFrame(ProgressLoad);
+			    }else{
+			        document.getElementsByClassName('Progress')[0].style.left = 0;
+			        window.cancelAnimationFrame(ProgressLoad);
+			     } 
+			}			    
+		</script>
+	</head>
+	<body onload="ProgressLoad()">
+		<div class="jd">
+			<div class="ProgressBackground">
+				<div class="Progress" style="left: 0px;"></div>
+			</div>
+		</div>
+		<div class="int">
+			<img class="int1" src="img/M6.jpg" />
+			<div class="main0">
+				<img  class="int2" src="img/M7.png">
+			</div>
+			<div class="main2">
+				<a href="https://lwenxue.github.io/web-tea-yi/NPC4.html"><img  class="int3" src="img/M8.png"></a>
+			</div>
+			<div class="main">
+				<a href="https://zzxxff1.github.io/chadao1/123.html" target="_self" title="点击跳转"><img  class="main1" src="img/M2.png"></a>
+			</div>
+		</div>
+		
+	</body>
+</html>
